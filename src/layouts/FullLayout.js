@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Container } from "reactstrap";
 import UseAuthentication from "../hooks/UseAuthenticationHook";
 import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 const FullLayout = ({}) => {
   const { authenticated, logout } = UseAuthentication();
@@ -16,7 +17,7 @@ const FullLayout = ({}) => {
 
         <div className="contentArea">
           {/********header**********/}
-          {/* <Header /> */}
+          <Header />
           {/********Middle Content**********/}
           <Container className="p-4 wrapper" fluid>
             <Outlet />
