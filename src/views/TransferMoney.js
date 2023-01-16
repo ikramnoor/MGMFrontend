@@ -55,9 +55,9 @@ const CheckoutForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div
-        style={{
-          padding: "3rem",
-        }}
+      // style={{
+      //   padding: "3rem",
+      // }}
       >
         <div
           style={{
