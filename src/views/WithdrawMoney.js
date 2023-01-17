@@ -127,7 +127,7 @@ const WithdrawMoney = () => {
         showConfirmButton: false,
         timer: 3000,
       });
-      // window.location = "/home";
+      window.location.reload();
       disableLoading();
     } catch (e) {
       Swal.fire({
@@ -200,7 +200,7 @@ const WithdrawMoney = () => {
               <Row className="mb-2">
                 <Col>
                   {" "}
-                  {amount >= 10 && (
+                  {amount >= 10 && amount - total >= 10 && (
                     <Button
                       className="btn"
                       color="success"
@@ -213,7 +213,7 @@ const WithdrawMoney = () => {
                 </Col>
                 <Col>
                   {" "}
-                  {amount >= 20 && (
+                  {amount >= 20 && amount - total >= 20 && (
                     <Button
                       className="btn"
                       color="success"
@@ -226,7 +226,7 @@ const WithdrawMoney = () => {
                 </Col>
                 <Col>
                   {" "}
-                  {amount >= 50 && (
+                  {amount >= 50 && amount - total >= 50 && (
                     <Button
                       className="btn"
                       color="success"
@@ -241,7 +241,7 @@ const WithdrawMoney = () => {
               <Row className="mb-2">
                 <Col>
                   {" "}
-                  {amount >= 100 && (
+                  {amount >= 100 && amount - total >= 100 && (
                     <Button
                       className="btn"
                       color="success"
@@ -254,7 +254,7 @@ const WithdrawMoney = () => {
                 </Col>
                 <Col>
                   {" "}
-                  {amount >= 500 && (
+                  {amount >= 500 && amount - total >= 500 && (
                     <Button
                       className="btn"
                       color="success"
@@ -267,7 +267,7 @@ const WithdrawMoney = () => {
                 </Col>
                 <Col>
                   {" "}
-                  {amount >= 1000 && (
+                  {amount >= 1000 && amount - total >= 1000 && (
                     <Button
                       className="btn"
                       color="success"
@@ -282,7 +282,7 @@ const WithdrawMoney = () => {
               <Row className="mb-2">
                 <Col>
                   {" "}
-                  {amount >= 5000 && (
+                  {amount >= 5000 && amount - total >= 5000 && (
                     <Button
                       className="btn"
                       color="success"

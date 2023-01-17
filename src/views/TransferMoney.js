@@ -42,14 +42,15 @@ const CheckoutForm = () => {
     } else {
       try {
         const data = await postRequest(transferMoney(), values, true);
+        Swal.fire({
+          text: "Payment Transfer Successfully",
+          icon: "success",
+          showCloseButton: false,
+          showConfirmButton: false,
+          timer: 3000,
+        });
+        window.location.reload();
       } catch (e) {}
-      Swal.fire({
-        text: "Payment Transfer Done Successfully",
-        icon: "success",
-        showCloseButton: false,
-        showConfirmButton: false,
-        timer: 3000,
-      });
     }
   };
   return (
